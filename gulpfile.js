@@ -46,9 +46,12 @@ function imagenWebp() {
 }
 
 // ── Imágenes optimizadas ─────────────────────────
+// archivo: gulpfile.js — reemplaza solo la función imagenes()
+
+// ── Imágenes optimizadas ─────────────────────────
 function imagenes() {
-  return src('src/img/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3 })))
+  return src('src/img/**/*.{jpg,png,svg}')
+    .pipe(imagemin({ optimizationLevel: 3 }))
     .pipe(dest('build/img'))
     .pipe(notify({ message: '✅ Imágenes optimizadas', onLast: true }));
 }

@@ -1,7 +1,7 @@
-
+// archivo: src/scss/layout/_contactar.scss
 
 .imagen-contacto {
-  background-image: url(../../../build/img/encuentra.jpg); // ✅ directo, sin clases
+  background-image: url(../img/encuentra.jpg); // ✅ ruta corregida
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -15,4 +15,3 @@
     color: $blanco;
   }
 }
-
