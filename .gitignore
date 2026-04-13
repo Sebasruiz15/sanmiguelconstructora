@@ -8,3 +8,14 @@ src/img/Cattleya/
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
+# En tu .gitignore deja solo las 4 que pesan 250MB
+# Imágenes gigantes de Cattleya
+build/img/Cattleya/15.png
+build/img/Cattleya/16.png
+build/img/Cattleya/17.png
+build/img/Cattleya/18.png
+src/img/Cattleya/15.png
+src/img/Cattleya/16.png
+src/img/Cattleya/17.png
+src/img/Cattleya/18.png
