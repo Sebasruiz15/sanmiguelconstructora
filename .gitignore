@@ -1,17 +1,9 @@
 # Dependencias
 node_modules/
 
-# Imágenes (se manejan por separado)
-build/img/
-src/img/
-img/
-
-# Build generado por gulp
-build/css/
-build/js/
-
-# Mapas
-*.map
+# Solo excluye las imágenes gigantes de Cattleya
+build/img/Cattleya/
+src/img/Cattleya/
 
 # Sistema operativo
 .DS_Store

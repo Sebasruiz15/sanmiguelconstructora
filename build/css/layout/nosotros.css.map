@@ -1,0 +1,1 @@
+{"version":3,"sources":["layout/nosotros.scss","layout/nosotros.css"],"names":[],"mappings":"AAAA,QACI,mBCCJ","file":"nosotros.css","sourcesContent":[".header {\r\n    padding: 1rem 0 3rem 0;\r\n    \r\n}\r\n",".header {\n  padding: 1rem 0 3rem 0;\n}"]}
