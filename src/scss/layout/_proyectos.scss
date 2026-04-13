@@ -1,0 +1,90 @@
+@include tablet{
+    .contenedor-proyectos{
+        @include grid(3,2rem);
+    }
+}
+
+.proyecto {
+    background-color: lighten($gris, 5);
+    border:1px solid darken($gris, 10);
+    border-radius: 2rem;
+
+    .contenido-proyecto{
+        padding: 2rem;
+    }
+    h3{
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: $regular;
+    }
+    p {
+        text-decoration: none;
+        text-align: justify;
+        margin: 0;
+        font-weight: $delgada;
+    }
+}
+.iconos-caracteristicas{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    
+    li{
+        flex: 1;
+        display: flex;
+
+        img{
+            flex: 0 0 3rem;
+            margin-right: 1rem;
+        }
+        p {
+            font-weight: $black;
+        }
+    }
+
+}
+
+// Dentro de .proyecto, al final del bloque existente
+
+.proyecto-botones {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2rem 2rem;
+
+  .boton {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5rem;
+    font-weight: $bold;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  // Botón principal — Contactar
+  .boton-naranja {
+    background-color: $grisOscuro;
+    color: $blanco;
+
+    &:hover {
+      background-color: darken($grisOscuro, 10%);
+    }
+
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+
+  // Botón secundario — Ver proyecto
+  .boton-outline {
+    background-color: transparent;
+    color: $grisOscuro;
+    border: 2px solid $grisOscuro;
+
+    &:hover {
+      background-color: $grisOscuro;
+      color: $blanco;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.nosotros {
+    padding: 1rem 0 3rem 0;
+
+    &.inicio {
+        background-image: url(../../../img/cam02.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        /* Altura del header */
+        min-height: 30rem;
+
+        /* Overlay oscuro */
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(40, 40, 40, 0.75);
+        }
+
+        .contenido-nosotros {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            height: 100%;
+        }
+
+        @include tablet {
+            min-height: 30rem;
+        }
+    }
+}

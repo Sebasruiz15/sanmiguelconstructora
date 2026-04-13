@@ -1,0 +1,46 @@
+.header {
+    padding: 1rem 0 3rem 0;
+
+    &.inicio {
+        background-image: url(../../../img/header.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        /* Overlay oscuro SIN tapar la imagen */
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(40, 40, 40, 0.75); // gris oscuro translúcido
+            
+        }
+
+        .contenido-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+
+            @include tablet {
+            min-height: 45rem;
+            }
+
+            h1{
+                text-align: left;
+                color: $blanco;
+                font-weight: $bold;
+                line-height: 1;
+                max-width: 65rem;
+                text-transform: uppercase;
+            }
+        }
+
+        @include tablet {
+            min-height: 45rem;
+        }
+    }
+}

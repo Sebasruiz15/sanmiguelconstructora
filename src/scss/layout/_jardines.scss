@@ -1,0 +1,195 @@
+.jardines {
+    padding: 1rem 0 3rem 0;
+
+    &.inicio {
+        background-image: url(../../../img/3.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        /* Altura del header */
+        min-height: 30rem;
+
+        /* Overlay oscuro */
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(40, 40, 40, 0.75);
+        }
+
+        .contenido-jardines {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            height: 100%;
+        }
+
+        @include tablet {
+            min-height: 30rem;
+        }
+    }
+}
+
+// archivo: src/scss/internas/_jardines.scss
+
+// --- Descripción general ---
+.seccion-descripcion {
+  padding: $separacion 0;
+}
+
+.descripcion-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 4rem;
+  }
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: $naranja;
+  color: $blanco;
+  font-size: 1.2rem;
+  font-weight: $bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.4rem 1.2rem;
+  border-radius: 5rem;
+  margin-bottom: 1.2rem;
+}
+
+.titulo-proyecto {
+  font-size: 3rem;
+  font-weight: $black;
+  color: $grisOscuro;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.descripcion-proyecto {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: $grisclaro;
+  margin-bottom: 2.5rem;
+  text-align: justify;
+
+  strong {
+    color: $grisOscuro;
+    font-weight: $bold;
+  }
+}
+
+// Botón naranja reutilizable
+.boton-naranja {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: $naranja;
+  color: $blanco;
+  padding: 1.2rem 2.5rem;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: $bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($naranja, 10%);
+  }
+}
+
+// --- Ficha técnica ---
+.ficha-tecnica {
+  background-color: $gris;
+  border-radius: 1.2rem;
+  padding: 2.5rem;
+  border-left: 5px solid $naranja;
+}
+
+.ficha-titulo {
+  font-size: 1.8rem;
+  font-weight: $black;
+  color: $grisOscuro;
+  margin: 0 0 2rem 0;
+}
+
+.ficha-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid darken($gris, 8%);
+    font-size: 1.4rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.ficha-label {
+  color: $grisclaro;
+  font-weight: $regular;
+}
+
+.ficha-valor {
+  color: $grisOscuro;
+  font-weight: $bold;
+  text-align: right;
+}
+
+.ficha-destacado {
+  color: $naranja;
+  font-size: 1.6rem;
+}
+
+// --- Stats ---
+.seccion-stats {
+  background-color: $grisOscuro;
+  padding: 4rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-numero {
+  font-size: 5rem;
+  font-weight: $black;
+  color: $naranja;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 1.4rem;
+  color: $blanco;
+  font-weight: $regular;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

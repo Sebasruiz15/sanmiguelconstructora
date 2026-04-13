@@ -1,0 +1,27 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/utilidades';
+@import 'base/botones';
+
+
+/**UI**/
+
+@import 'layout/header';
+@import 'layout/nosotros';
+@import 'layout/footer';
+@import 'layout/navegacion';
+@import 'layout/iconos';
+@import 'layout/proyectos';
+@import 'layout/proyecto';
+@import 'layout/contactar';
+@import 'layout/contacto';
+@import 'layout/formulario';
+@import 'layout/jardines';
+@import 'layout/cattleya';
+
+
+/** Paginas internas **/
+@import 'internas/nosotros';
+

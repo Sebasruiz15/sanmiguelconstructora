@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>San Miguel</title>
+    <link rel="stylesheet" href="build/css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="icon" href="build/img/lgsan.png" type="image/png" />
+  </head>
+  <body>
+    <header class="cattleya inicio">
+      <div class="contenedor contenido-cattleya">
+        <div class="barra">
+          <a href="/">
+            <img src="build/img/lgsan.png" alt="Logo san miguel" />
+          </a>
+          <div class="mobile-menu">
+                    <img src="build/img/barras.svg" alt="menu responsive">
+                </div>
+          <nav class="navegacion">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="/contacto.html">Contacto</a>
+            <!-- <a href=""></a> -->
+          </nav>
+        </div>
+        <!--Barra-->
+        <!-- <h1>Inmobiliaria y Constructora San Miguel</h1> -->
+      </div>
+    </header>
+    
+     <!-- Debajo del header, dentro del <main> -->
+
+<main>
+
+  <!-- Descripción general -->
+  <section class="seccion-descripcion contenedor">
+    <div class="descripcion-grid">
+
+      <div class="descripcion-texto">
+        <span class="etiqueta">Proyecto residencial</span>
+        <h2 class="titulo-proyecto">Unidad Residencial Cattleya</h2>
+        <p class="descripcion-proyecto">
+          Desarrollo urbanístico de <strong>Inmobiliaria y Constructora San Miguel</strong>
+          en El Carmen de Viboral, consolidado como un entorno residencial tranquilo
+          y con alta proyección. Su ubicación y organización lo convierten en una
+          excelente alternativa para quienes buscan construir o invertir en una zona
+          en crecimiento.
+        </p>
+        <a href="https://wa.me/573207664475" class="boton boton-naranja" target="_blank">
+          <i class="fab fa-whatsapp"></i> Solicitar información
+        </a>
+      </div>
+
+      <!-- Ficha técnica -->
+      <div class="ficha-tecnica">
+        <h3 class="ficha-titulo">📊 Características</h3>
+        <ul class="ficha-lista">
+          <li>
+            <span class="ficha-label">Tipo</span>
+            <span class="ficha-valor">Urbanismo residencial</span>
+          </li>
+          <li>
+            <span class="ficha-label">Uso</span>
+            <span class="ficha-valor">Lotes para vivienda</span>
+          </li>
+          <li>
+            <span class="ficha-label">Entorno</span>
+            <span class="ficha-valor">Tranquilo y consolidado</span>
+          </li>
+          <li>
+            <span class="ficha-label">Disponibilidad</span>
+            <span class="ficha-valor ficha-destacado">🔥 Últimos 4 lotes</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="seccion-stats">
+    <div class="contenedor stats-grid">
+      <div class="stat-item">
+        <span class="stat-numero">4</span>
+        <span class="stat-label">Lotes disponibles</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-numero">100%</span>
+        <span class="stat-label">Urbanismo listo</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-numero">📍</span>
+        <span class="stat-label">El Carmen de Viboral</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="seccion-galeria contenedor">
+  <h2 class="galeria-titulo">Galería del proyecto</h2>
+
+  <!-- Imagen principal -->
+  <div class="galeria-principal">
+  <picture>
+    <source id="source-principal" srcset="build/img/Cattleya/1.webp" type="image/webp" />
+    <img id="imagen-principal" src="build/img/Cattleya/1.jpg" alt="Cattleya foto principal" />
+  </picture>
+  <button class="galeria-btn galeria-btn--prev" id="btn-prev">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button class="galeria-btn galeria-btn--next" id="btn-next">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+  <span class="galeria-contador" id="galeria-contador">1 / 10</span>
+</div>
+
+<div class="galeria-thumbs" id="galeria-thumbs">
+  <img src="build/img/Cattleya/1.webp"  class="thumb activo" data-index="0" data-webp="build/img/Cattleya/1.webp"  data-jpg="build/img/Cattleya/1.jpg"  alt="foto 1"  />
+  <img src="build/img/Cattleya/2.webp"  class="thumb"        data-index="1" data-webp="build/img/Cattleya/2.webp"  data-jpg="build/img/Cattleya/2.jpg"  alt="foto 2"  />
+  <img src="build/img/Cattleya/3.webp"  class="thumb"        data-index="2" data-webp="build/img/Cattleya/3.webp"  data-jpg="build/img/Cattleya/3.jpg"  alt="foto 3"  />
+  <img src="build/img/Cattleya/4.webp"  class="thumb"        data-index="3" data-webp="build/img/Cattleya/4.webp"  data-jpg="build/img/Cattleya/4.jpg"  alt="foto 4"  />
+  <img src="build/img/Cattleya/5.webp"  class="thumb"        data-index="4" data-webp="build/img/Cattleya/5.webp"  data-jpg="build/img/Cattleya/5.jpg"  alt="foto 5"  />
+  <img src="build/img/Cattleya/6.webp"  class="thumb"        data-index="5" data-webp="build/img/Cattleya/6.webp"  data-jpg="build/img/Cattleya/6.jpg"  alt="foto 6"  />
+  <img src="build/img/Cattleya/7.webp"  class="thumb"        data-index="6" data-webp="build/img/Cattleya/7.webp"  data-jpg="build/img/Cattleya/7.jpg"  alt="foto 7"  />
+  <img src="build/img/Cattleya/8.webp"  class="thumb"        data-index="7" data-webp="build/img/Cattleya/8.webp"  data-jpg="build/img/Cattleya/8.jpg"  alt="foto 8"  />
+  <img src="build/img/Cattleya/9.webp"  class="thumb"        data-index="8" data-webp="build/img/Cattleya/9.webp"  data-jpg="build/img/Cattleya/9.jpg"  alt="foto 9"  />
+  <img src="build/img/Cattleya/10.webp" class="thumb"        data-index="9" data-webp="build/img/Cattleya/10.webp" data-jpg="build/img/Cattleya/10.jpg" alt="foto 10" />
+</div>
+
+</main>
+
+    <footer class="footer seccion">
+      <div class="contenedor-footer">
+        <div class="footer-top">
+          <div class="redes">
+            <p>Síguenos en nuestras redes sociales</p>
+            <div class="redes-sociales">
+              <a
+                href="https://www.facebook.com/share/1Dudd9Ziy5/"
+                target="_blank"
+                class="facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/sanmiguelconstructora?igsh=MXhrcDV6bjc3ZjBtMQ=="
+                target="_blank"
+                class="instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/573207664475"
+                target="_blank"
+                class="whatsapp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="copyright">
+          Todos los Derechos Reservados 2026 &copy; Inmobiliaria y Constructora
+          San Miguel
+        </p>
+      </div>
+    </footer>
+    <!-- archivo: cattleya.html — al final del </body> -->
+
+    <script src="build/js/bundle.min.js"></script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const imagenPrincipal  = document.getElementById('imagen-principal');
+    const sourcePrincipal  = document.getElementById('source-principal');
+    if (!imagenPrincipal) return;
+
+    const thumbs   = document.querySelectorAll('.thumb');
+    const btnPrev  = document.getElementById('btn-prev');
+    const btnNext  = document.getElementById('btn-next');
+    const contador = document.getElementById('galeria-contador');
+    let indiceActual = 0;
+
+    function cambiarImagen(nuevoIndice) {
+      indiceActual = (nuevoIndice + thumbs.length) % thumbs.length;
+      const thumb  = thumbs[indiceActual];
+
+      // Fade
+      imagenPrincipal.style.opacity = '0';
+      setTimeout(() => {
+        // Cambia webp en <source> y jpg en <img> como fallback
+        sourcePrincipal.srcset      = thumb.dataset.webp;
+        imagenPrincipal.src         = thumb.dataset.jpg;
+        imagenPrincipal.style.opacity = '1';
+      }, 250);
+
+      // Miniatura activa
+      thumbs.forEach((t, i) => t.classList.toggle('activo', i === indiceActual));
+
+      // Contador
+      contador.textContent = `${indiceActual + 1} / ${thumbs.length}`;
+    }
+
+    thumbs.forEach((thumb, i) => {
+      thumb.addEventListener('click', () => cambiarImagen(i));
+    });
+
+    btnPrev.addEventListener('click', () => cambiarImagen(indiceActual - 1));
+    btnNext.addEventListener('click', () => cambiarImagen(indiceActual + 1));
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft')  cambiarImagen(indiceActual - 1);
+      if (e.key === 'ArrowRight') cambiarImagen(indiceActual + 1);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
+    <script src="build/js/bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+# Dependencias
+node_modules/
+
+# Imágenes (se manejan por separado)
+build/img/
+src/img/
+img/
+
+# Build generado por gulp
+build/css/
+build/js/
+
+# Mapas
+*.map
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
