@@ -1,3 +1,4 @@
+// archivo: src/scss/base/_variables.scss
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
 // Fuentes
@@ -5,22 +6,32 @@ $fuente_principal: 'Lato', sans-serif;
 
 // Tamaño de Media Queries
 $telefono: 480px;
-$tablet: 768px;
-$desktop: 1024px;
+$tablet:   768px;
+$desktop:  1024px;
 
-// Colores
-$negro: #000000;
-$naranja: #f79627;;
-$verde: #71B100;
-$blanco: #FFFFFF;
-$gris: #e1e1e1;
+// Colores base
+$negro:      #000000;
+$naranja:    #f79627;
+$verde:      #71B100;
+$blanco:     #FFFFFF;
+$gris:       #e1e1e1;
 $grisOscuro: #333333;
-$grisclaro: #585858;
+$grisclaro:  #585858;
+
+// ✅ Colores derivados precalculados
+
+$gris-claro-5:      #ebebeb;   // lighten($gris, 5%)
+$gris-oscuro-8:     #cbcbcb;   // darken($gris, 8%)
+$gris-oscuro-10:    #c4c4c4;   // darken($gris, 10%)
+$gris-oscuro-15:    #b3b3b3;   // darken($gris, 15%)
+$naranja-oscuro:    #d97f1a;   // darken($naranja, 10%)
+$grisOscuro-oscuro: #1a1a1a;   // darken($grisOscuro, 10%)
+$grisOscuro-hover:  #202020;   // darken($grisOscuro, 5%)
 
 $separacion: 5rem;
 
 // Fuentes
 $delgada: 300;
-$regular : 400;
-$bold: 700;
-$black: 900
+$regular: 400;
+$bold:    700;
+$black:   900;

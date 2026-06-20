@@ -1,211 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Miguel Constructora</title>
-    <link rel="stylesheet" href="build/css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="build/img/lgsan.png" type="image/png">
 
+    <!-- SEO -->
+    <title>San Miguel Constructora | Proyectos Residenciales El Carmen de Viboral</title>
+    <meta name="description" content="Inmobiliaria y Constructora San Miguel. Proyectos residenciales de calidad en El Carmen de Viboral, Antioquia. Cattleya, Jardines y Nativo.">
+    <meta property="og:title" content="San Miguel Constructora">
+    <meta property="og:description" content="Desarrollamos proyectos que transforman espacios en oportunidades para vivir, crecer e invertir.">
+    <meta property="og:image" content="https://sanmiguelconstructora.vercel.app/build/img/lgsan.png">
+    <meta property="og:url" content="https://sanmiguelconstructora.vercel.app/">
+    <meta property="og:type" content="website">
+    
+
+    <!-- CSS propio (compilado por Gulp) -->
+    <link rel="stylesheet" href="build/css/app.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="build/img/lgsan.png" type="image/png">
 </head>
 <body>
+
+    <!-- HEADER / HERO -->
     <header class="header inicio">
-        <div class="contenedor contenido-header"> 
+        <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
-                 <img src="build/img/lgsan.png" alt="Logo san miguel">
+                    <img src="build/img/lgsan.png" alt="Logo Inmobiliaria San Miguel">
                 </a>
-
-                <div class="mobile-menu">
-                    <img src="build/img/barras.svg" alt="menu responsive">
+                <div class="mobile-menu" role="button" aria-label="Abrir menú" tabindex="0">
+                    <img src="build/img/barras.svg" alt="Menú">
                 </div>
-                <nav class="navegacion">
+                <nav class="navegacion" role="navigation" aria-label="Menú principal">
                     <a href="nosotros.html">Nosotros</a>
                     <a href="proyectos.html">Proyectos</a>
-                    <a href="/contacto.html">Contacto</a>
-                    <!-- <a href=""></a> -->
+                    <a href="contacto.html">Contacto</a>
                 </nav>
-            </div> <!--Barra-->
-            <h1>Inmobiliaria y Constructora San Miguel</h1>
+            </div>
 
+            <div class="hero-contenido">
+                <span class="hero-tag">🏗️ El Carmen de Viboral, Antioquia</span>
+                <h1>Inmobiliaria y Constructora San Miguel</h1>
+                <p class="hero-subtitulo">
+                    Transformamos espacios en oportunidades para vivir, crecer e invertir.
+                    Proyectos con respaldo, calidad y cumplimiento.
+                </p>
+                <div class="hero-ctas">
+                    <a href="proyectos.html" class="hero-cta-primary">
+                        <i class="fas fa-building"></i> Ver proyectos
+                    </a>
+                    <a href="https://wa.me/573207664475" target="_blank" rel="noopener" class="hero-cta-secondary">
+                        <i class="fab fa-whatsapp"></i> Escríbenos
+                    </a>
+                </div>
+            </div>
         </div>
+
+       
     </header>
-        <main class="contenedor seccion">
-        <h1>Sobre Nosotros</h1>
- 
+
+    <!-- ESTADÍSTICAS -->
+    <section class="seccion-stats" aria-label="Estadísticas">
+        <div class="contenedor">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <span class="stat-numero" data-target="10">0</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="stat-numero" data-target="0">0</span>
+                    <span class="stat-label">Proyectos activos</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="stat-numero" data-target="500">0</span>
+                    <span class="stat-label">Familias beneficiadas</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <span class="stat-numero" data-target="100">0</span>
+                    <span class="stat-label">% Respaldo legal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <main class="contenedor seccion">
+        <h2 data-aos="fade-up">Sobre Nosotros</h2>
         <div class="iconos-nosotros">
-            <div class="icono">
-                <img src="build/img/security.png" alt="Icono seguridad" loading="lazy">
+            <div class="icono" data-aos="fade-up" data-aos-delay="0">
+                <img src="build/img/security.png" alt="Seguridad y confianza" loading="lazy">
                 <h3>🛡️ Confianza que respalda tu inversión</h3>
-                <p>Invertir bien empieza con confiar. En Inmobiliaria y Constructora San Miguel te ofrecemos procesos claros, respaldo legal y acompañamiento experto para que tomes decisiones seguras desde el primer paso.
-                </p>
+                <p>Procesos claros, respaldo legal y acompañamiento experto para que tomes decisiones seguras desde el primer paso.</p>
             </div>
-            <div class="icono">
-                <img src="build/img/money.png" alt="Icono Precio" loading="lazy">
+            <div class="icono" data-aos="fade-up" data-aos-delay="150">
+                <img src="build/img/money.png" alt="Inversión inteligente" loading="lazy">
                 <h3>💰 Valor que sí se siente</h3>
-                <p>En Inmobiliaria y Constructora San Miguel desarrollamos proyectos bien diseñados, funcionales y pensados para perdurar, convirtiendo cada decisión en una inversión sólida y estratégica.
-                
-                </p>
+                <p>Proyectos bien diseñados, funcionales y pensados para perdurar, convirtiendo cada decisión en una inversión sólida.</p>
             </div>
-            <div class="icono">
-                <img src="build/img/time.png" alt="Icono Tiempo" loading="lazy">
+            <div class="icono" data-aos="fade-up" data-aos-delay="300">
+                <img src="build/img/time.png" alt="Cumplimiento de tiempos" loading="lazy">
                 <h3>⏱️ Cumplimos lo que prometemos</h3>
-                <p>En Inmobiliaria y Constructora San Miguel, tu tiempo también es inversión. Planificamos y ejecutamos cada proyecto con precisión para entregar resultados en los tiempos acordados.
+                <p>Tu tiempo también es inversión. Planificamos y ejecutamos con precisión para entregar en los tiempos acordados.</p>
             </div>
         </div>
     </main>
 
-    <section class="imagen-contacto">
-        
+    <!-- CTA WHATSAPP -->
+    <section class="imagen-contacto" aria-label="Contacto rápido">
         <h2>Encuentra el apartamento de tus sueños</h2>
-
-        <a href="https://wa.me/573207664475" class="boton boton-grisOscuro"> Escribenos al WhatsApp</a>
-
+        <a href="https://wa.me/573207664475" target="_blank" rel="noopener" class="boton boton-grisOscuro">
+            <i class="fab fa-whatsapp"></i> Escríbenos al WhatsApp
+        </a>
     </section>
-    
 
-    <section class="seccion contenedor">
-        <h2>Proyectos de Exitos</h2>
+    <!-- TOUR VIRTUAL 360° -->
+    <!-- ⚠️ Asegurate de que la colección en Kuula esté en modo PÚBLICO -->
+    <section class="seccion-tour" aria-label="Tour virtual 360°">
+        <div class="contenedor">
+            <div class="tour-header" data-aos="fade-up">
+                <span class="tour-badge">🔭 Experiencia inmersiva</span>
+                <h2>Recorre nuestros proyectos en 360°</h2>
+                <p>Explorá cada rincón de San Miguel Campestre sin salir de casa.</p>
+            </div>
+            <div class="tour-wrapper" data-aos="zoom-in" data-aos-duration="800">
+                <script
+                    src="https://static.kuula.io/embed.js"
+                    data-kuula="https://kuula.co/share/collection/7c8HK?logo=1&info=1&fs=1&vr=0&zoom=1&autorotate=0.08&thumbs=1&inst=es"
+                    data-width="100%"
+                    data-height="600px">
+                </script>
+            </div>
+        </div>
+    </section>
 
+    <!-- PROYECTOS -->
+    <section class="seccion contenedor" aria-label="Proyectos destacados">
+        <h2 data-aos="fade-up">Proyectos Destacados</h2>
         <div class="contenedor-proyectos">
-            <div class="proyecto">
-                <picture>
-                    <source srcset="build/img/Catt.webp" type="image/webp">
-                    <source srcset="build/img/Catt.jpg" type="image/jpg">
-                    <img loading="lazy" src="build/img/Catt.png" alt="anuncio">
-                </picture>
-                <div class="contenido-proyecto">
-                    <h3>Cattleya</h3>
-                    <p>
-                        Unidad Residencial Cattleya es un desarrollo urbanístico de
-                        Inmobiliaria y Constructora San Miguel en El Carmen de Viboral,
-                        consolidado como un entorno residencial tranquilo y con alta
-                        proyección. Su ubicación y organización lo convierten en una
-                        excelente alternativa para quienes buscan construir o invertir
-                        en una zona en crecimiento.
-                    </p>
-                    <ul class="iconos-caracteristicas">
-                        <li>
-                            <img loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>2</p>
-                        </li>
-                         <li>
-                            <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>1</p>
-                        </li>
-                         <li>
-                            <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono dormitorio">
-                            <p>3</p>
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/573207664475" class=" boton-grisOscuro-block">
-                        Contactar 
-                    </a>
-                </div><!--.contenido-proyectos-->
-            </div><!--proyectos-->
 
-            <div class="proyecto">
-                <picture>
-                    <source srcset="build/img/logojardines.webp" type="image/webp">
-                    <source srcset="build/img/logojardines.jpg" type="image/jpg">
-                    <img loading="lazy" src="build/img/logojardines.png" alt="anuncio">
-                </picture>
-                <div class="contenido-proyecto">
-                    <h3>Residencia Jardines</h3>
-                    <p>
-                      Urbanismo Jardines de San Miguel es un proyecto desarrollado y
-                        entregado por Inmobiliaria y Constructora San Miguel en El
-                        Carmen de Viboral, enfocado en la planificación y adecuación de
-                        espacios para el desarrollo de vivienda. Ubicado en la Carrera
-                        31 N° 36-51, este proyecto establece las bases para la
-                        construcción de soluciones residenciales en un entorno
-                        organizado, funcional y con proyección de crecimiento.
-                    </p>
-                    <ul class="iconos-caracteristicas">
-                        <li>
-                            <img loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>2</p>
-                        </li>
-                         <li>
-                            <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>1</p>
-                        </li>
-                         <li>
-                            <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono dormitorio">
-                            <p>3</p>
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/573207664475" class=" boton-grisOscuro-block">
-                        Contactar 
-                    </a>
-                </div><!--.contenido-proyectos-->
-            </div><!--proyectos-->
-
-            <div class="proyecto">
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="300">
                 <picture>
                     <source srcset="build/img/logonativo.webp" type="image/webp">
-                    <source srcset="build/img/logonativo.jpg" type="image/jpg">
-                    <img loading="lazy" src="build/img/logonativo.png" alt="anuncio">
+                    <source srcset="build/img/logonativo.jpg" type="image/jpeg">
+                    <img loading="lazy" src="build/img/logonativo.png" alt="Residencia Nativo">
                 </picture>
                 <div class="contenido-proyecto">
-                    <h3>Residencia Nativo</h3>
-                    <p>
-                        Nativo es un proyecto de Inmobiliaria y Constructora San Miguel,
-                        actualmente en ejecución en El Carmen de Viboral, diseñado para
-                        ofrecer una experiencia de vida moderna en una ubicación
-                        privilegiada. A tan solo una cuadra del parque principal,
-                        combina comodidad, conectividad y alta proyección.
-                    </p>
+                    <span class="proyecto-estado estado-ejecucion">🚧 En ejecución</span>
+                    
+                    <p>A una cuadra del parque principal. Combina comodidad, conectividad y alta proyección en una ubicación privilegiada.</p>
                     <ul class="iconos-caracteristicas">
-                        <li>
-                            <img loading="lazy" src="build/img/icono_wc.svg" alt="icono wc">
-                            <p>2</p>
-                        </li>
-                         <li>
-                            <img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono estacionamiento">
-                            <p>1</p>
-                        </li>
-                         <li>
-                            <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono dormitorio">
-                            <p>3</p>
-                        </li>
+                        <li><img loading="lazy" src="build/img/icono_wc.svg" alt="Baños"><p>2</p></li>
+                        <li><img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Parqueaderos"><p>1</p></li>
+                        <li><img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones"><p>3</p></li>
                     </ul>
-                    <a href="https://wa.me/573207664475" class=" boton-grisOscuro-block">
-                        Contactar 
+                </div>
+                <div class="proyecto-botones">
+                    <a href="https://wa.me/573207664475" target="_blank" rel="noopener" class="btn-contactar">
+                        <i class="fab fa-whatsapp"></i> Contactar
                     </a>
-                </div><!--.contenido-proyectos-->
-            </div><!--proyectos-->
-
-        </div><!--.contenedor-proyectos-->
-
-    </section>
-
- <footer class="footer seccion">
-    <div class="contenedor-footer">
-
-        <div class="footer-top">
-            <div class="redes">
-                <p>Síguenos en nuestras redes sociales</p>
-                <div class="redes-sociales">
-                    <a href="https://www.facebook.com/share/1Dudd9Ziy5/" target="_blank" class="facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/sanmiguelconstructora?igsh=MXhrcDV6bjc3ZjBtMQ==" target="_blank" class="instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/573207664475" target="_blank" class="whatsapp">
-                        <i class="fab fa-whatsapp"></i>
+                    <a href="cattleta.html" class="btn-ver">
+                        <i class="fas fa-eye"></i> Ver proyecto
                     </a>
                 </div>
             </div>
-        </div>
-        <p class="copyright">
-            Todos los Derechos Reservados 2026 &copy; Inmobiliaria y Constructora San Miguel
-        </p>
 
-    </div>
-</footer>
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="0">
+                <picture>
+                    <source srcset="build/img/Catt.webp" type="image/webp">
+                    <source srcset="build/img/Catt.jpg" type="image/jpeg">
+                    <img loading="lazy" src="build/img/Catt.png" alt="Unidad Residencial Cattleya">
+                </picture>
+                <div class="contenido-proyecto">
+                    <span class="proyecto-estado estado-disponible">✅ Disponible</span>
+                   
+                    <p>Desarrollo urbanístico en El Carmen de Viboral con alta proyección. Ideal para construir o invertir en una zona en crecimiento.</p>
+                    <ul class="iconos-caracteristicas">
+                        <li><img loading="lazy" src="build/img/icono_wc.svg" alt="Baños"><p>2</p></li>
+                        <li><img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Parqueaderos"><p>1</p></li>
+                        <li><img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones"><p>3</p></li>
+                    </ul>
+                </div>
+                <div class="proyecto-botones">
+                    <a href="https://wa.me/573207664475" target="_blank" rel="noopener" class="btn-contactar">
+                        <i class="fab fa-whatsapp"></i> Contactar
+                    </a>
+                    <a href="cattleta.html" class="btn-ver">
+                        <i class="fas fa-eye"></i> Ver proyecto
+                    </a>
+                </div>
+            </div>
+
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="150">
+                <picture>
+                    <source srcset="build/img/logojardines.webp" type="image/webp">
+                    <source srcset="build/img/logojardines.jpg" type="image/jpeg">
+                    <img loading="lazy" src="build/img/logojardines.png" alt="Residencia Jardines de San Miguel">
+                </picture>
+                <div class="contenido-proyecto">
+                    <span class="proyecto-estado estado-entregado">🏁 Entregado</span>
+                   
+                    <p>Proyecto desarrollado y entregado en la Carrera 31 N° 36-51. Espacios organizados, funcionales y con proyección de crecimiento.</p>
+                    <ul class="iconos-caracteristicas">
+                        <li><img loading="lazy" src="build/img/icono_wc.svg" alt="Baños"><p>2</p></li>
+                        <li><img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Parqueaderos"><p>1</p></li>
+                        <li><img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones"><p>3</p></li>
+                    </ul>
+                </div>
+                <div class="proyecto-botones">
+                    <a href="https://wa.me/573207664475" target="_blank" rel="noopener" class="btn-contactar">
+                        <i class="fab fa-whatsapp"></i> Contactar
+                    </a>
+                    <a href="jardines.html" class="btn-ver">
+                        <i class="fas fa-eye"></i> Ver proyecto
+                    </a>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer seccion">
+        <div class="contenedor-footer">
+            <div class="footer-top">
+                <div class="redes">
+                    <p>Síguenos en nuestras redes sociales</p>
+                    <div class="redes-sociales">
+                        <a href="https://www.facebook.com/share/1Dudd9Ziy5/" target="_blank" rel="noopener" class="facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sanmiguelconstructora?igsh=MXhrcDV6bjc3ZjBtMQ==" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/573207664475" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">
+                Todos los Derechos Reservados 2026 &copy; Inmobiliaria y Constructora San Miguel
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- AOS primero, luego tu bundle -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="build/js/bundle.min.js"></script>
 </body>
 </html>

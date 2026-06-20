@@ -1,29 +1,52 @@
-@include tablet{
-    .iconos-nosotros{
+// archivo: src/scss/layout/_iconos.scss
+
+@include tablet {
+    .iconos-nosotros {
         @include grid(3, 3rem);
     }
 }
- 
-.icono{
-    text-align: center;
-    img{
-        width: 15rem;
-        height: 15rem;
-        display: block;
-        margin: 0 auto;
-    }
-    h3 {
-        text-transform: uppercase;
-        
-    }
-    p {
-        text-align: justify;
-        background-color: lighten($gris, 5);
-        border:1px solid darken($gris, 10);
-        border-radius: 2rem;
-        padding: 1rem;
-       
 
+.icono {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: $blanco;
+    border: 1px solid $gris;
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
     }
-    
+
+    img {
+        // ✅ Tamaño reducido y balanceado para la card
+        width: 8rem;
+        height: 8rem;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 2rem;
+    }
+
+    h3 {
+        // ✅ Sin uppercase — se leía todo cortado
+        text-transform: none;
+        font-size: 1.8rem;
+        font-weight: $bold;
+        color: $grisOscuro;
+        margin: 0 0 1.2rem 0;
+        line-height: 1.3;
+    }
+
+    p {
+        // ✅ Sin fondo gris ni borde — texto limpio
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        font-size: 1.5rem;
+        line-height: 1.7;
+        color: $grisclaro;
+    }
 }

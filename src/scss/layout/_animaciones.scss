@@ -1,0 +1,298 @@
+// archivo: src/scss/layout/_animaciones.scss
+// ✅ Sin @use — compatible con el sistema @import del proyecto
+
+// ── Hero ─────────────────────────────────────────
+.hero-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-top: 4rem;
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: rgba(247, 150, 39, 0.15);
+    border: 1px solid $naranja;
+    color: $naranja;
+    font-size: 1.3rem;
+    font-weight: $bold;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10rem;
+    animation: fadeInDown 0.8s ease both;
+}
+
+.header.inicio .contenido-header h1 {
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-subtitulo {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.8rem;
+    max-width: 55rem;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.hero-cta-primary {
+    background-color: $naranja;
+    color: $blanco;
+    font-weight: $bold;
+    padding: 1.4rem 3rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        // ✅ Variable precalculada, sin darken()
+        background-color: $naranja-oscuro;
+        transform: translateY(-2px);
+    }
+}
+
+.hero-cta-secondary {
+    background-color: transparent;
+    color: $blanco;
+    font-weight: $bold;
+    padding: 1.4rem 3rem;
+    border-radius: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+        border-color: $blanco;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    animation: fadeIn 2s ease 1.5s both;
+
+    .chevron {
+        animation: bounce 1.5s infinite;
+        font-size: 1.6rem;
+    }
+}
+
+// ── Estadísticas ──────────────────────────────────
+.seccion-stats {
+    background-color: $grisOscuro;
+    padding: 5rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    text-align: center;
+
+    @include tablet {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.stat-item { color: $blanco; }
+
+.stat-numero {
+    font-size: 5rem;
+    font-weight: $black;
+    color: $naranja;
+    line-height: 1;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+// ── Cards nosotros ────────────────────────────────
+.icono {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    background: $blanco;
+    border: 1px solid $gris;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+        width: 7rem;
+        margin: 0 auto 1.5rem;
+    }
+}
+
+// ── Tour 360° ─────────────────────────────────────
+.seccion-tour {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.tour-header {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    p {
+        color: $grisclaro;
+        font-size: 1.7rem;
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+}
+
+.tour-badge {
+    display: inline-block;
+    background-color: $naranja;
+    color: $blanco;
+    font-size: 1.2rem;
+    font-weight: $bold;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    padding: 0.4rem 1.2rem;
+    border-radius: 10rem;
+    margin-bottom: 1.5rem;
+}
+
+.tour-wrapper {
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.15);
+}
+
+// ── Proyectos hover ───────────────────────────────
+.proyecto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.12);
+    }
+
+    picture {
+        overflow: hidden;
+
+        img {
+            border-radius: 2rem 2rem 0 0;
+            transition: transform 0.4s ease;
+        }
+    }
+
+    &:hover picture img {
+        transform: scale(1.04);
+    }
+}
+
+// ── Badge estado proyecto ─────────────────────────
+.proyecto-estado {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: $bold;
+    padding: 0.3rem 1rem;
+    border-radius: 10rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.estado-ejecucion  { background-color: #fff3cd; color: #856404; }
+.estado-entregado  { background-color: #d1e7dd; color: #0a3622; }
+.estado-disponible { background-color: #cfe2ff; color: #084298; }
+
+// ── Botones proyecto ──────────────────────────────
+.proyecto-botones {
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem 2rem;
+
+    a {
+        flex: 1;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 5rem;
+        font-weight: $bold;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        &:hover { transform: translateY(-2px); }
+    }
+}
+
+.btn-contactar {
+    background-color: $grisOscuro;
+    color: $blanco;
+
+    &:hover {
+        background-color: $grisOscuro-oscuro;
+    }
+}
+
+.btn-ver {
+    background-color: transparent;
+    color: $grisOscuro;
+    border: 2px solid $grisOscuro;
+
+    &:hover {
+        background-color: $grisOscuro;
+        color: $blanco;
+    }
+}
+
+// ── Keyframes ─────────────────────────────────────
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(6px); }
+}

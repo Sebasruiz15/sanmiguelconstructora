@@ -1,147 +1,158 @@
+// archivo: src/js/app.js
 
+// ─────────────────────────────────────────────────
+// Módulo: menú responsive
+// ─────────────────────────────────────────────────
+function initMenuMobile() {
+    const btn = document.querySelector('.mobile-menu');
+    const nav = document.querySelector('.navegacion');
+    if (!btn || !nav) return;
 
-document.addEventListener('DOMContentLoaded', function() {
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('mostrar');
+    });
 
-    eventListeners();
-});
-
-function eventListeners() {
-
-    const mobileMenu = document.querySelector('.mobile-menu');
-    mobileMenu.addEventListener('click', navegacionResponsive);
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('mostrar');
+        });
+    });
 }
-function navegacionResponsive() {
-    const navegacion = document.querySelector('.navegacion');
-    
-    navegacion.classList.toggle('mostrar');
-}
 
+// ─────────────────────────────────────────────────
+// Módulo: formulario de contacto con EmailJS
+// ─────────────────────────────────────────────────
+function initFormulario() {
+    if (typeof emailjs === 'undefined') return;
 
-// archivo: src/js/contacto.js
+    emailjs.init('6uEJ-8KyJau11wRK6');
 
-(function () {
-  // 🔑 Reemplaza estos valores con los tuyos de EmailJS
-  const PUBLIC_KEY   = '6uEJ-8KyJau11wRK6';
-  const SERVICE_ID   = 'service_eriievh';
-  const TEMPLATE_ID  = 'template_89vxnto';
+    const form = document.getElementById('formulario-contacto');
+    if (!form) return;
 
-  emailjs.init(PUBLIC_KEY);
+    const submit = form.querySelector('input[type="submit"]');
 
-  const formulario = document.getElementById('formulario-contacto');
-  const boton      = formulario.querySelector('input[type="submit"]');
+    function mostrarAlerta(mensaje, tipo) {
+        const previa = document.querySelector('.alerta-form');
+        if (previa) previa.remove();
 
-  if (!formulario) return; // Solo corre en la página de contacto
+        const alerta = document.createElement('p');
+        alerta.classList.add('alerta-form', `alerta-${tipo}`);
+        alerta.textContent = mensaje;
+        form.insertAdjacentElement('afterend', alerta);
 
-  formulario.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    // Feedback visual mientras se envía
-    boton.value    = 'Enviando...';
-    boton.disabled = true;
-
-    const templateParams = {
-      nombre:   formulario.nombre.value.trim(),
-      email:    formulario.email.value.trim(),
-      telefono: formulario.telefono.value.trim(),
-      mensaje:  formulario.mensaje.value.trim(),
-    };
-
-    try {
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
-
-      mostrarAlerta('✅ Mensaje enviado con éxito. Pronto te contactaremos.', 'exito');
-      formulario.reset();
-
-    } catch (error) {
-      console.error('Error al enviar:', error);
-      mostrarAlerta('❌ Hubo un error al enviar. Intenta de nuevo.', 'error');
-
-    } finally {
-      boton.value    = 'Enviar Mensaje';
-      boton.disabled = false;
+        setTimeout(() => alerta.remove(), 5000);
     }
-  });
 
-  /**
-   * Muestra un mensaje de alerta debajo del formulario
-   * @param {string} mensaje
-   * @param {'exito'|'error'} tipo
-   */
-  function mostrarAlerta(mensaje, tipo) {
-    // Evita duplicar alertas
-    const existente = document.querySelector('.alerta-form');
-    if (existente) existente.remove();
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        submit.value    = 'Enviando...';
+        submit.disabled = true;
 
-    const alerta = document.createElement('p');
-    alerta.classList.add('alerta-form', `alerta-${tipo}`);
-    alerta.textContent = mensaje;
+        const datos = {
+            nombre:   form.nombre.value.trim(),
+            email:    form.email.value.trim(),
+            telefono: form.telefono.value.trim(),
+            mensaje:  form.mensaje.value.trim(),
+        };
 
-    formulario.insertAdjacentElement('afterend', alerta);
-
-    // Se oculta sola después de 5 segundos
-    setTimeout(() => alerta.remove(), 5000);
-  }
-})();
-
-// archivo: src/js/galeria.js
-
-(function () {
-  const imagenPrincipal = document.getElementById('imagen-principal');
-  const thumbs          = document.querySelectorAll('.thumb');
-  const btnPrev         = document.getElementById('btn-prev');
-  const btnNext         = document.getElementById('btn-next');
-  const contador        = document.getElementById('galeria-contador');
-
-  // Si no hay galería en esta página, no hace nada
-  if (!imagenPrincipal) return;
-
-  const imagenes = Array.from(thumbs).map(t => t.src);
-  let indiceActual = 0;
-
-  function cambiarImagen(nuevoIndice) {
-    // Fade out
-    imagenPrincipal.classList.add('fadeout');
-
-    setTimeout(() => {
-      indiceActual = (nuevoIndice + imagenes.length) % imagenes.length;
-
-      imagenPrincipal.src = imagenes[indiceActual];
-      imagenPrincipal.classList.remove('fadeout');
-
-      // Actualiza miniaturas activas
-      thumbs.forEach((t, i) => {
-        t.classList.toggle('activo', i === indiceActual);
-      });
-
-      // Actualiza contador
-      contador.textContent = `${indiceActual + 1} / ${imagenes.length}`;
-    }, 300);
-  }
-
-  // Clicks en miniaturas
-  thumbs.forEach((thumb, i) => {
-    thumb.addEventListener('click', () => cambiarImagen(i));
-  });
-
-  // Botones anterior / siguiente
-  btnPrev.addEventListener('click', () => cambiarImagen(indiceActual - 1));
-  btnNext.addEventListener('click', () => cambiarImagen(indiceActual + 1));
-
-  // Navegación con teclado
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft')  cambiarImagen(indiceActual - 1);
-    if (e.key === 'ArrowRight') cambiarImagen(indiceActual + 1);
-  });
-})();
-// archivo: gulpfile.js — agrega esto
-
-const webp = require('gulp-webp');
-
-function imagenWebp() {
-  return src('src/img/**/*.{jpg,png}')   // toma todas las jpg y png
-    .pipe(webp())                          // convierte a webp
-    .pipe(dest('build/img'));              // guarda en build/img
+        try {
+            await emailjs.send('service_eriievh', 'template_89vxnto', datos);
+            mostrarAlerta('✅ Mensaje enviado con éxito. Pronto te contactaremos.', 'exito');
+            form.reset();
+        } catch (err) {
+            console.error('EmailJS error:', err);
+            mostrarAlerta('❌ Hubo un error al enviar. Intentá de nuevo.', 'error');
+        } finally {
+            submit.value    = 'Enviar Mensaje';
+            submit.disabled = false;
+        }
+    });
 }
 
-// Agrégala a tu exports al final del archivo
-exports.webp = imagenWebp;
+// ─────────────────────────────────────────────────
+// Módulo: galería de imágenes con teclado
+// ─────────────────────────────────────────────────
+function initGaleria() {
+    const imgPrincipal = document.getElementById('imagen-principal');
+    if (!imgPrincipal) return;
+
+    const thumbs   = document.querySelectorAll('.thumb');
+    const btnPrev  = document.getElementById('btn-prev');
+    const btnNext  = document.getElementById('btn-next');
+    const contador = document.getElementById('galeria-contador');
+    const imagenes = Array.from(thumbs).map(t => t.src);
+    let actual     = 0;
+
+    function cambiarImagen(indice) {
+        imgPrincipal.classList.add('fadeout');
+        setTimeout(() => {
+            actual = (indice + imagenes.length) % imagenes.length;
+            imgPrincipal.src = imagenes[actual];
+            imgPrincipal.classList.remove('fadeout');
+            thumbs.forEach((t, i) => t.classList.toggle('activo', i === actual));
+            if (contador) contador.textContent = `${actual + 1} / ${imagenes.length}`;
+        }, 300);
+    }
+
+    thumbs.forEach((t, i) => t.addEventListener('click', () => cambiarImagen(i)));
+    btnPrev?.addEventListener('click', () => cambiarImagen(actual - 1));
+    btnNext?.addEventListener('click', () => cambiarImagen(actual + 1));
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft')  cambiarImagen(actual - 1);
+        if (e.key === 'ArrowRight') cambiarImagen(actual + 1);
+    });
+}
+
+// ─────────────────────────────────────────────────
+// Módulo: contadores animados
+// ─────────────────────────────────────────────────
+function initContadores() {
+    const contadores = document.querySelectorAll('.stat-numero[data-target]');
+    if (!contadores.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting || entry.target.dataset.animado) return;
+
+            entry.target.dataset.animado = 'true';
+            const target   = parseInt(entry.target.dataset.target, 10);
+            const duracion = 1800;
+            const pasos    = 60;
+            let paso       = 0;
+
+            const intervalo = setInterval(() => {
+                paso++;
+                const valor = Math.min(Math.round((target / pasos) * paso), target);
+                entry.target.textContent = valor;
+                if (paso >= pasos) {
+                    entry.target.textContent = target;
+                    clearInterval(intervalo);
+                }
+            }, duracion / pasos);
+        });
+    }, { threshold: 0.5 });
+
+    contadores.forEach(c => observer.observe(c));
+}
+
+// ─────────────────────────────────────────────────
+// Init único — un solo DOMContentLoaded
+// ─────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+    initMenuMobile();
+    initFormulario();
+    initGaleria();
+    initContadores();
+
+    // AOS — solo si está cargado en la página
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 700,
+            once: true,
+            offset: 80,
+            easing: 'ease-out-cubic'
+        });
+    }
+});

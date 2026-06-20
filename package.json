@@ -4,7 +4,9 @@
   "description": "Proyecto de diseño web para la constructora San Miguel",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "NODE_ENV=production gulp build",
+    "build:win": "set NODE_ENV=production && gulp build"
   },
   "author": "Juan Sebastián Ruiz",
   "license": "ISC",
@@ -21,7 +23,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-terser-js": "^5.2.2",
+    "gulp-terser": "^2.1.0",
     "gulp-webp": "^4.0.1",
     "sass": "^1.49.9",
     "terser": "^4.8.0"

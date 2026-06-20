@@ -1,39 +1,35 @@
-/** Media Queries **/
+// archivo: src/scss/base/_mixins.scss
+
 @mixin telefono {
-    @media (min-width: #{$telefono}) {
-        @content;
-    }
+    @media (min-width: #{$telefono}) { @content; }
+}
+@mixin tablet {
+    @media (min-width: #{$tablet}) { @content; }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}) { @content; }
 }
 
-@mixin tablet {
-    @media (min-width: #{$tablet}) {
-        @content;
-    }
-}
-  
-@mixin desktop {
-    @media (min-width: #{$desktop}) {
-        @content;
-    }
-}
-@mixin grid($columnas, $espaciado ) {
+@mixin grid($columnas, $espaciado) {
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
 
-@mixin boton($bgcolor,$display ) {
+@mixin boton($bgcolor, $display) {
     background-color: $bgcolor;
     color: $blanco;
     font-weight: $bold;
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
-    margin-top: $separacion / 2;
+    margin-top: calc($separacion / 2);
     border-radius: 1rem;
     display: $display;
+    transition: background-color 0.3s ease;
 
+    // ✅ Usamos filter en vez de darken() — funciona con cualquier color
     &:hover {
-        background-color:darken($bgcolor, 2) ;
+        filter: brightness(0.88);
     }
 }
