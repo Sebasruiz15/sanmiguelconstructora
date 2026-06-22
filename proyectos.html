@@ -1,472 +1,212 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>San Miguel</title>
-    <link rel="stylesheet" href="build/css/app.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <link rel="icon" href="build/img/lgsan.png" type="image/png" />
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | San Miguel Constructora</title>
+    <meta name="description" content="Conocé todos los proyectos residenciales de Inmobiliaria y Constructora San Miguel en El Carmen de Viboral: Nativo, Cattleya, Jardines, Portal de los Ángeles y San Miguel Campestre.">
+    <meta property="og:title" content="Proyectos | San Miguel Constructora">
+    <meta property="og:description" content="Proyectos residenciales de calidad en El Carmen de Viboral, Antioquia.">
+    <meta property="og:image" content="https://sanmiguelconstructora.vercel.app/build/img/lgsan.png">
+    <meta property="og:url" content="https://sanmiguelconstructora.vercel.app/proyectos.html">
+
+    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" href="build/img/lgsan.png" type="image/png">
+</head>
+<body>
+
+    <!-- HEADER -->
     <header class="proyecto inicio">
-      <div class="contenedor contenido-proyecto">
-        <div class="barra">
-          <a href="/">
-            <img src="build/img/lgsan.png" alt="Logo san miguel" />
-          </a>
-          <nav class="navegacion">
-            <a href="nosotros.html">Nosotros</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="/contacto.html">Contacto</a>
-            <!-- <a href=""></a> -->
-          </nav>
+        <div class="contenedor contenido-proyecto">
+            <div class="barra">
+                <a href="/">
+                    <img src="build/img/lgsan.png" alt="Logo Inmobiliaria San Miguel">
+                </a>
+                <div class="mobile-menu" role="button" aria-label="Abrir menú" tabindex="0">
+                    <img src="build/img/barras.svg" alt="Menú">
+                </div>
+                <nav class="navegacion" role="navigation" aria-label="Menú principal">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="proyectos.html">Proyectos</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
         </div>
-        <!--Barra-->
-        <!-- <h1>Inmobiliaria y Constructora San Miguel</h1> -->
-      </div>
     </header>
-    <main class="contenedor seccion">
-      <h1>Nuestros Proyectos</h1>
 
-      <section class="seccion contenedor">
-        <div class="contenedor-proyectos">
-          <div class="proyecto">
-            <picture>
-              <source srcset="build/img/Catt.webp" type="image/webp" />
-              <source srcset="build/img/Catt.jpg" type="image/jpg" />
-              <img loading="lazy" src="build/img/Catt.png" alt="anuncio" />
-            </picture>
-            <div class="contenido-proyecto">
-              <h3>Cattleya</h3>
-              <p>
-                Unidad Residencial Cattleya es un desarrollo urbanístico de
-                Inmobiliaria y Constructora San Miguel en El Carmen de Viboral,
-                consolidado como un entorno residencial tranquilo y con alta
-                proyección. Su ubicación y organización lo convierten en una
-                excelente alternativa para quienes buscan construir o invertir
-                en una zona en crecimiento.
-              </p>
-              <ul class="iconos-caracteristicas">
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_wc.svg"
-                    alt="icono wc"
-                  />
-                  <p>2</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_estacionamiento.svg"
-                    alt="icono estacionamiento"
-                  />
-                  <p>1</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_dormitorio.svg"
-                    alt="icono dormitorio"
-                  />
-                  <p>3</p>
-                </li>
-              </ul>
-              <div class="proyecto-botones">
-                <a
-                  href="https://wa.me/573207664475"
-                  class="boton boton-naranja"
-                  target="_blank"
-                >
-                  <i class="fab fa-whatsapp"></i> Contactar
-                </a>
-                <a href="cattleta.html" class="boton boton-outline">
-                  Ver proyecto
-                </a>
-              </div>
-            </div>
-            <!--.contenido-proyectos-->
-          </div>
-          <!--proyectos-->
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section class="contenedor seccion">
 
-          <div class="proyecto">
-            <picture>
-              <source srcset="build/img/logojardines.webp" type="image/webp" />
-              <source srcset="build/img/logojardines.jpg" type="image/jpg" />
-              <img
-                loading="lazy"
-                src="build/img/logojardines.png"
-                alt="anuncio"
-              />
-            </picture>
-            <div class="contenido-proyecto">
-              <h3>Residencia Jardines</h3>
-              <p>
-                Urbanismo Jardines de San Miguel es un proyecto desarrollado y
-                entregado por Inmobiliaria y Constructora San Miguel en El
-                Carmen de Viboral, enfocado en la planificación y adecuación de
-                espacios para el desarrollo de vivienda. Ubicado en la Carrera
-                31 N° 36-51, este proyecto establece las bases para la
-                construcción de soluciones residenciales en un entorno
-                organizado, funcional y con proyección de crecimiento.
-              </p>
-              <ul class="iconos-caracteristicas">
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_wc.svg"
-                    alt="icono wc"
-                  />
-                  <p>2</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_estacionamiento.svg"
-                    alt="icono estacionamiento"
-                  />
-                  <p>1</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_dormitorio.svg"
-                    alt="icono dormitorio"
-                  />
-                  <p>3</p>
-                </li>
-              </ul>
-              <div class="proyecto-botones">
-                <a
-                  href="https://wa.me/573207664475"
-                  class="boton boton-naranja"
-                  target="_blank"
-                >
-                  <i class="fab fa-whatsapp"></i> Contactar
-                </a>
-                <a href="jardines.html" class="boton boton-outline">
-                  Ver proyecto
-                </a>
-              </div>
-            </div>
-            <!--.contenido-proyectos-->
-          </div>
-          <!--proyectos-->
+            <h1 data-aos="fade-up">Nuestros Proyectos</h1>
+            <p class="proyectos-subtitulo" data-aos="fade-up" data-aos-delay="100">
+                Desarrollamos proyectos pensados para vivir, crecer e invertir en El Carmen de Viboral.
+            </p>
 
-          <div class="proyecto">
-            <picture>
-              <source srcset="build/img/logonativo.webp" type="image/webp" />
-              <source srcset="build/img/logonativo.jpg" type="image/jpg" />
-              <img
-                loading="lazy"
-                src="build/img/logonativo.png"
-                alt="anuncio"
-              />
-            </picture>
-            <div class="contenido-proyecto">
-              <h3>Residencia Nativo</h3>
-              <p>
-                Nativo es un proyecto de Inmobiliaria y Constructora San Miguel,
-                actualmente en ejecución en El Carmen de Viboral, diseñado para
-                ofrecer una experiencia de vida moderna en una ubicación
-                privilegiada. A tan solo una cuadra del parque principal,
-                combina comodidad, conectividad y alta proyección.
-              </p>
-              <ul class="iconos-caracteristicas">
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_wc.svg"
-                    alt="icono wc"
-                  />
-                  <p>2</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_estacionamiento.svg"
-                    alt="icono estacionamiento"
-                  />
-                  <p>1</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_dormitorio.svg"
-                    alt="icono dormitorio"
-                  />
-                  <p>3</p>
-                </li>
-              </ul>
-              <a
-                href="https://wa.me/573207664475"
-                class="boton-grisOscuro-block"
-              >
-                Contactar
-              </a>
-            </div>
-            <!--.contenido-proyectos-->
-          </div>
-          <!--proyectos-->
+            <div class="contenedor-proyectos">
 
-          <div class="proyecto">
-            <picture>
-              <source srcset="build/img/logoportales.webp" type="image/webp" />
-              <source srcset="build/img/logoportales.jpg" type="image/jpg" />
-              <img
-                loading="lazy"
-                src="build/img/logoportales.png"
-                alt="anuncio"
-              />
-            </picture>
-            <div class="contenido-proyecto">
-              <h3>Portal de los Ángeles</h3>
-              <p>
-                Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti
-                sit minus consectetur obcaecati molestiae dolorem natus dolores
-                reiciendis tempore, explicabo cum nobis laudantium. Voluptates?
-              </p>
-              <ul class="iconos-caracteristicas">
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_wc.svg"
-                    alt="icono wc"
-                  />
-                  <p>2</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_estacionamiento.svg"
-                    alt="icono estacionamiento"
-                  />
-                  <p>1</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_dormitorio.svg"
-                    alt="icono dormitorio"
-                  />
-                  <p>3</p>
-                </li>
-              </ul>
-              <a
-                href="https://wa.me/573207664475"
-                class="boton-grisOscuro-block"
-              >
-                Contactar
-              </a>
-            </div>
-            <!--.contenido-proyectos-->
-          </div>
-          <!--proyectos-->
+                <!-- 1. Nativo -->
+                <div class="proyecto" data-aos="fade-up" data-aos-delay="0">
+                    <picture>
+                        <source srcset="build/img/logonativo.webp" type="image/webp">
+                        <source srcset="build/img/logonativo.jpg" type="image/jpeg">
+                        <img loading="lazy" src="build/img/logonativo.png" alt="Residencia Nativo - San Miguel Constructora">
+                    </picture>
+                    <div class="contenido-proyecto">
+                        <span class="proyecto-estado estado-ejecucion">🚧 En ejecución</span>
+                        <p>Proyecto actualmente en ejecución en El Carmen de Viboral. A una cuadra del parque principal, combina comodidad, conectividad y alta proyección en una ubicación privilegiada.</p>
+                        <ul class="iconos-caracteristicas">
+                            <li><img loading="lazy" src="build/img/icono_wc.svg" alt="Baños"><p>2</p></li>
+                            <li><img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Parqueaderos"><p>1</p></li>
+                            <li><img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones"><p>3</p></li>
+                        </ul>
+                    </div>
+                    <div class="proyecto-botones">
+                        <a href="https://wa.me/573207664475?text=Hola%2C%20estoy%20interesado%20en%20Residencia%20Nativo%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%8F%97%EF%B8%8F"
+                           target="_blank" rel="noopener" class="btn-contactar">
+                            <i class="fab fa-whatsapp"></i> Contactar
+                        </a>
+                        <a href="nativo.html" class="btn-ver">
+                            <i class="fas fa-eye"></i> Ver proyecto
+                        </a>
+                    </div>
+                </div>
 
-          <div class="proyecto">
-            <picture>
-              <source srcset="build/img/Camp.webp" type="image/webp" />
-              <source srcset="build/img/Camp.jpg" type="image/jpg" />
-              <img loading="lazy" src="build/img/Camp.png" alt="anuncio" />
-            </picture>
-            <div class="contenido-proyecto">
-              <h3>Residencia Nativo</h3>
-              <p>
-                Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti
-                sit minus consectetur obcaecati molestiae dolorem natus dolores
-                reiciendis tempore, explicabo cum nobis laudantium. Voluptates?
-              </p>
-              <ul class="iconos-caracteristicas">
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_wc.svg"
-                    alt="icono wc"
-                  />
-                  <p>2</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_estacionamiento.svg"
-                    alt="icono estacionamiento"
-                  />
-                  <p>1</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_dormitorio.svg"
-                    alt="icono dormitorio"
-                  />
-                  <p>3</p>
-                </li>
-              </ul>
-              <a
-                href="https://wa.me/573207664475"
-                class="boton-grisOscuro-block"
-              >
-                Contactar
-              </a>
-            </div>
-            <!--.contenido-proyectos-->
-          </div>
-          <!--proyectos-->
+                <!-- 2. Cattleya -->
+                <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
+                    <picture>
+                        <source srcset="build/img/Catt.webp" type="image/webp">
+                        <source srcset="build/img/Catt.jpg" type="image/jpeg">
+                        <img loading="lazy" src="build/img/Catt.png" alt="Unidad Residencial Cattleya - San Miguel Constructora">
+                    </picture>
+                    <div class="contenido-proyecto">
+                        <span class="proyecto-estado estado-disponible">✅ Disponible</span>
+                        <p>Desarrollo urbanístico en El Carmen de Viboral con alta proyección de valorización. Ideal para construir o invertir en una zona en crecimiento.</p>
+                        <ul class="iconos-caracteristicas">
+                            <li><img loading="lazy" src="build/img/icono_wc.svg" alt="Baños"><p>2</p></li>
+                            <li><img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Parqueaderos"><p>1</p></li>
+                            <li><img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones"><p>3</p></li>
+                        </ul>
+                    </div>
+                    <div class="proyecto-botones">
+                        <a href="https://wa.me/573207664475?text=Hola%2C%20estoy%20interesado%20en%20el%20proyecto%20Cattleya%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%8F%A0"
+                           target="_blank" rel="noopener" class="btn-contactar">
+                            <i class="fab fa-whatsapp"></i> Contactar
+                        </a>
+                        <a href="cattleta.html" class="btn-ver">
+                            <i class="fas fa-eye"></i> Ver proyecto
+                        </a>
+                    </div>
+                </div>
 
-          <div class="proyecto">
-            <picture>
-              <source srcset="build/img/logonativo.webp" type="image/webp" />
-              <source srcset="build/img/logonativo.jpg" type="image/jpg" />
-              <img
-                loading="lazy"
-                src="build/img/logonativo.png"
-                alt="anuncio"
-              />
-            </picture>
-            <div class="contenido-proyecto">
-              <h3>Residencia Nativo</h3>
-              <p>
-                Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti
-                sit minus consectetur obcaecati molestiae dolorem natus dolores
-                reiciendis tempore, explicabo cum nobis laudantium. Voluptates?
-              </p>
-              <ul class="iconos-caracteristicas">
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_wc.svg"
-                    alt="icono wc"
-                  />
-                  <p>2</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_estacionamiento.svg"
-                    alt="icono estacionamiento"
-                  />
-                  <p>1</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_dormitorio.svg"
-                    alt="icono dormitorio"
-                  />
-                  <p>3</p>
-                </li>
-              </ul>
-              <a
-                href="https://wa.me/573207664475"
-                class="boton-grisOscuro-block"
-              >
-                Contactar
-              </a>
-            </div>
-            <!--.contenido-proyectos-->
-          </div>
-          <!--proyectos-->
+                <!-- 3. Jardines -->
+                <div class="proyecto" data-aos="fade-up" data-aos-delay="200">
+                    <picture>
+                        <source srcset="build/img/logojardines.webp" type="image/webp">
+                        <source srcset="build/img/logojardines.jpg" type="image/jpeg">
+                        <img loading="lazy" src="build/img/logojardines.png" alt="Residencia Jardines de San Miguel">
+                    </picture>
+                    <div class="contenido-proyecto">
+                        <span class="proyecto-estado estado-entregado">🏁 Entregado</span>
+                        <p>Proyecto desarrollado y entregado en la Carrera 31 N° 36-51. Espacios organizados, funcionales y con proyección de crecimiento en El Carmen de Viboral.</p>
+                        <ul class="iconos-caracteristicas">
+                            <li><img loading="lazy" src="build/img/icono_wc.svg" alt="Baños"><p>2</p></li>
+                            <li><img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Parqueaderos"><p>1</p></li>
+                            <li><img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones"><p>3</p></li>
+                        </ul>
+                    </div>
+                    <div class="proyecto-botones">
+                        <a href="https://wa.me/573207664475?text=Hola%2C%20estoy%20interesado%20en%20Residencia%20Jardines%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%8F%A1"
+                           target="_blank" rel="noopener" class="btn-contactar">
+                            <i class="fab fa-whatsapp"></i> Contactar
+                        </a>
+                        <a href="jardines.html" class="btn-ver">
+                            <i class="fas fa-eye"></i> Ver proyecto
+                        </a>
+                    </div>
+                </div>
 
-          <div class="proyecto">
-            <picture>
-              <source srcset="build/img/logonativo.webp" type="image/webp" />
-              <source srcset="build/img/logonativo.jpg" type="image/jpg" />
-              <img
-                loading="lazy"
-                src="build/img/logonativo.png"
-                alt="anuncio"
-              />
-            </picture>
-            <div class="contenido-proyecto">
-              <h3>Residencia Nativo</h3>
-              <p>
-                Possimus, suscipit repudiandae. Autem deserunt aliquid deleniti
-                sit minus consectetur obcaecati molestiae dolorem natus dolores
-                reiciendis tempore, explicabo cum nobis laudantium. Voluptates?
-              </p>
-              <ul class="iconos-caracteristicas">
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_wc.svg"
-                    alt="icono wc"
-                  />
-                  <p>2</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_estacionamiento.svg"
-                    alt="icono estacionamiento"
-                  />
-                  <p>1</p>
-                </li>
-                <li>
-                  <img
-                    loading="lazy"
-                    src="build/img/icono_dormitorio.svg"
-                    alt="icono dormitorio"
-                  />
-                  <p>3</p>
-                </li>
-              </ul>
-              <a
-                href="https://wa.me/573207664475"
-                class="boton-grisOscuro-block"
-              >
-                Contactar
-              </a>
+                <!-- 4. Portal de los Ángeles -->
+                <div class="proyecto" data-aos="fade-up" data-aos-delay="0">
+                    <picture>
+                        <source srcset="build/img/logoportales.webp" type="image/webp">
+                        <source srcset="build/img/logoportales.jpg" type="image/jpeg">
+                        <img loading="lazy" src="build/img/logoportales.png" alt="Portal de los Ángeles - San Miguel Constructora">
+                    </picture>
+                    <div class="contenido-proyecto">
+                        <span class="proyecto-estado estado-disponible">✅ Disponible</span>
+                        <p>Proyecto residencial de Inmobiliaria y Constructora San Miguel. Próximamente más información disponible. Contáctanos para conocer todos los detalles.</p>
+                        <ul class="iconos-caracteristicas">
+                            <li><img loading="lazy" src="build/img/icono_wc.svg" alt="Baños"><p>2</p></li>
+                            <li><img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Parqueaderos"><p>1</p></li>
+                            <li><img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones"><p>3</p></li>
+                        </ul>
+                    </div>
+                    <div class="proyecto-botones">
+                        <a href="https://wa.me/573207664475?text=Hola%2C%20estoy%20interesado%20en%20Portal%20de%20los%20%C3%81ngeles%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%8F%A0"
+                           target="_blank" rel="noopener" class="btn-contactar">
+                            <i class="fab fa-whatsapp"></i> Contactar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. San Miguel Campestre -->
+                <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
+                    <picture>
+                        <source srcset="build/img/Camp.webp" type="image/webp">
+                        <source srcset="build/img/Camp.jpg" type="image/jpeg">
+                        <img loading="lazy" src="build/img/Camp.png" alt="San Miguel Campestre - San Miguel Constructora">
+                    </picture>
+                    <div class="contenido-proyecto">
+                        <span class="proyecto-estado estado-ejecucion">🚧 En ejecución</span>
+                          <p>Proyecto campestre de Inmobiliaria y Constructora San Miguel. Una propuesta única que combina naturaleza y confort. Próximamente más detalles disponibles.</p>
+                        <ul class="iconos-caracteristicas">
+                            <li><img loading="lazy" src="build/img/icono_wc.svg" alt="Baños"><p>2</p></li>
+                            <li><img loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Parqueaderos"><p>1</p></li>
+                            <li><img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Habitaciones"><p>3</p></li>
+                        </ul>
+                    </div>
+                    <div class="proyecto-botones">
+                        <a href="https://wa.me/573207664475?text=Hola%2C%20estoy%20interesado%20en%20San%20Miguel%20Campestre%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20%F0%9F%8F%95"
+                           target="_blank" rel="noopener" class="btn-contactar">
+                            <i class="fab fa-whatsapp"></i> Contactar
+                        </a>
+                    </div>
+                </div>
+
             </div>
-            <!--.contenido-proyectos-->
-          </div>
-          <!--proyectos-->
-        </div>
-        <!--.contenedor-proyectos-->
-      </section>
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer seccion">
-      <div class="contenedor-footer">
-        <div class="footer-top">
-          <div class="redes">
-            <p>Síguenos en nuestras redes sociales</p>
-            <div class="redes-sociales">
-              <a
-                href="https://www.facebook.com/share/1Dudd9Ziy5/"
-                target="_blank"
-                class="facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/sanmiguelconstructora?igsh=MXhrcDV6bjc3ZjBtMQ=="
-                target="_blank"
-                class="instagram"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://wa.me/573207664475"
-                target="_blank"
-                class="whatsapp"
-              >
-                <i class="fab fa-whatsapp"></i>
-              </a>
+        <div class="contenedor-footer">
+            <div class="footer-top">
+                <div class="redes">
+                    <p>Síguenos en nuestras redes sociales</p>
+                    <div class="redes-sociales">
+                        <a href="https://www.facebook.com/share/1Dudd9Ziy5/" target="_blank" rel="noopener" class="facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/sanmiguelconstructora?igsh=MXhrcDV6bjc3ZjBtMQ==" target="_blank" rel="noopener" class="instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/573207664475" target="_blank" rel="noopener" class="whatsapp" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <p class="copyright">
+                Todos los Derechos Reservados 2026 &copy; Inmobiliaria y Constructora San Miguel
+            </p>
         </div>
-
-        <p class="copyright">
-          Todos los Derechos Reservados 2026 &copy; Inmobiliaria y Constructora
-          San Miguel
-        </p>
-      </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="build/js/bundle.min.js"></script>
-  </body>
+
+</body>
 </html>
