@@ -1,16 +1,18 @@
-// archivo: src/scss/layout/_jardines.scss
-
+// ── Descripción y ficha técnica ───────────────────
 .jardines {
     padding: 1rem 0 3rem 0;
 
     &.inicio {
-        background-image: url(../img/3.jpg);
+        background-image: url(../img/04.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
+
+        /* Altura del header */
         min-height: 30rem;
 
+        /* Overlay oscuro */
         &::before {
             content: "";
             position: absolute;
@@ -32,8 +34,6 @@
         }
     }
 }
-
-// --- Descripción general ---
 .seccion-descripcion {
     padding: $separacion 0;
 }
@@ -70,6 +70,7 @@
     color: $grisOscuro;
     margin: 0 0 1.5rem 0;
     line-height: 1.2;
+    text-align: left;
 }
 
 .descripcion-proyecto {
@@ -85,7 +86,6 @@
     }
 }
 
-// Botón naranja reutilizable
 .boton-naranja {
     display: inline-flex;
     align-items: center;
@@ -99,13 +99,11 @@
     text-decoration: none;
     transition: background-color 0.3s ease;
 
-    // ✅ filter reemplaza darken() — compatible con @import legacy
     &:hover {
         filter: brightness(0.88);
     }
 }
 
-// --- Ficha técnica ---
 .ficha-tecnica {
     background-color: $gris;
     border-radius: 1.2rem;
@@ -118,6 +116,7 @@
     font-weight: $black;
     color: $grisOscuro;
     margin: 0 0 2rem 0;
+    text-align: left;
 }
 
 .ficha-lista {
@@ -126,14 +125,12 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0;
 
     li {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1.2rem 0;
-        // ✅ Variable precalculada reemplaza darken($gris, 8%)
         border-bottom: 1px solid $gris-oscuro-8;
         font-size: 1.4rem;
 
@@ -157,38 +154,4 @@
 .ficha-destacado {
     color: $naranja;
     font-size: 1.6rem;
-}
-
-// --- Stats ---
-.seccion-stats {
-    background-color: $grisOscuro;
-    padding: 4rem 0;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    text-align: center;
-}
-
-.stat-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.stat-numero {
-    font-size: 5rem;
-    font-weight: $black;
-    color: $naranja;
-    line-height: 1;
-}
-
-.stat-label {
-    font-size: 1.4rem;
-    color: $blanco;
-    font-weight: $regular;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }

@@ -156,3 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function imagenWebp() {
+    return src([
+        'src/img/**/*.{jpg,png}',
+        '!src/img/portal/**/*'
+    ])
+        .pipe(webp())
+        .pipe(dest('build/img'));
+}
