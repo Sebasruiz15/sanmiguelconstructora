@@ -1,0 +1,103 @@
+// archivo: src/scss/layout/_modal.scss
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 0.4s ease;
+
+    &.oculto {
+        display: none;
+    }
+}
+
+.modal-contenido {
+    position: relative;
+    background: $blanco;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    max-width: 45rem; // ← reducido de 60rem a 45rem
+    width: 100%;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.4s ease;
+}
+
+.modal-cerrar {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $blanco;
+    border: none;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+
+    &:hover {
+        background-color: $naranja;
+    }
+}
+
+.modal-img {
+    width: 100%;
+    display: block;
+    // ✅ Sin max-height ni object-fit — la imagen se ve completa
+    height: auto;
+    object-fit: contain;
+}
+
+.modal-footer {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background-color: $blanco;
+}
+
+.modal-titulo {
+    font-size: 1.6rem;
+    color: $grisOscuro;
+    margin: 0;
+
+    strong {
+        color: $naranja;
+    }
+}
+
+.modal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: $naranja;
+    color: $blanco;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    font-weight: $bold;
+    text-decoration: none;
+    transition: filter 0.3s ease;
+    white-space: nowrap;
+
+    &:hover {
+        filter: brightness(0.88);
+    }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

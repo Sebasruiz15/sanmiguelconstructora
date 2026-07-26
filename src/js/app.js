@@ -145,6 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initFormulario();
     initGaleria();
     initContadores();
+    initModalBienvenida();
+    initProteccionImagenes();
 
     // AOS — solo si está cargado en la página
     if (typeof AOS !== 'undefined') {
@@ -165,3 +167,62 @@ function imagenWebp() {
         .pipe(webp())
         .pipe(dest('build/img'));
 }
+
+// ─────────────────────────────────────────────────
+// Módulo: modal de bienvenida
+// ─────────────────────────────────────────────────
+function initModalBienvenida() {
+    const overlay = document.getElementById('modal-bienvenida');
+    const btnCerrar = document.getElementById('modal-cerrar');
+    if (!overlay) return;
+
+    // Solo mostramos el modal una vez por sesión
+    const yaVisto = sessionStorage.getItem('modal-origen-visto');
+    if (yaVisto) {
+        overlay.classList.add('oculto');
+        return;
+    }
+
+    // Cerrar con el botón X
+    btnCerrar.addEventListener('click', () => {
+        overlay.classList.add('oculto');
+        sessionStorage.setItem('modal-origen-visto', 'true');
+    });
+
+    // Cerrar haciendo click fuera del contenido
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.add('oculto');
+            sessionStorage.setItem('modal-origen-visto', 'true');
+        }
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            overlay.classList.add('oculto');
+            sessionStorage.setItem('modal-origen-visto', 'true');
+        }
+    });
+}
+
+// ─────────────────────────────────────────────────
+// Módulo: protección de imágenes
+// ─────────────────────────────────────────────────
+function initProteccionImagenes() {
+    // Bloquear clic derecho en toda la página
+    document.addEventListener('contextmenu', e => {
+        e.preventDefault();
+    });
+
+    // Bloquear arrastre de imágenes
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', e => e.preventDefault());
+    });
+
+    // Bloquear selección de texto sobre imágenes
+    document.querySelectorAll('.galeria-principal, .galeria-thumbs').forEach(el => {
+        el.addEventListener('selectstart', e => e.preventDefault());
+    });
+}
+
