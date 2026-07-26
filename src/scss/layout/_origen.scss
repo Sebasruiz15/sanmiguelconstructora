@@ -1,0 +1,106 @@
+// archivo: src/scss/layout/_origen.scss
+
+.origen {
+    padding: 1rem 0 3rem 0;
+
+    &.inicio {
+        background-image: url(../img/origen/01.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        min-height: 30rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(40, 40, 40, 0.75);
+        }
+
+        .contenido-origen {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            height: 100%;
+        }
+
+        @include tablet {
+            min-height: 30rem;
+        }
+    }
+}
+
+// ✅ Galería vertical — para fachada e imágenes portrait
+.galeria-vertical {
+    aspect-ratio: unset !important;
+
+    img {
+        height: auto !important;
+        object-fit: contain !important;
+        max-height: 80rem;
+    }
+}
+
+// ── Alerta canales oficiales ──────────────────────
+.alerta-oficial {
+    margin-bottom: $separacion;
+}
+
+.alerta-oficial-inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #fff8e1;
+    border: 2px solid $naranja;
+    border-radius: 1.2rem;
+    padding: 2rem 2.5rem;
+    flex-wrap: wrap;
+
+    > i {
+        font-size: 3rem;
+        color: $naranja;
+        flex-shrink: 0;
+    }
+
+    > div {
+        flex: 1;
+        min-width: 20rem;
+    }
+}
+
+.alerta-oficial-titulo {
+    font-size: 1.6rem;
+    font-weight: $bold;
+    color: $grisOscuro;
+    margin: 0 0 0.5rem 0;
+}
+
+.alerta-oficial-texto {
+    font-size: 1.4rem;
+    color: $grisclaro;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.alerta-oficial-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: $naranja;
+    color: $blanco;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    font-weight: $bold;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: filter 0.3s ease;
+    flex-shrink: 0;
+
+    &:hover {
+        filter: brightness(0.88);
+    }
+}
